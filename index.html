@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Tip Calculator</title>
+ <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-blue-700 font-serif">
+ <div class="container w-72 mx-auto p-10 border-indigo-400 border-4 mt-4 " id="topdiv">
+  <h1 class="text-lg text-white font-extrabold mb-4 text-center text-xl" id="lowerdiv">Tip Calculator</h1>
+  <form id="form" class="mb-5">
+   <label class="block font-bold mb-2 text-white" for="cost">Service Cost</label>
+   <input class="shadow w-full appearance-none mb-2 rounded border-l-4 " id="servicecost" type="text" id="cost">
+
+   <label class="block font-bold mb-2 text-white"  for="numofserv">Number of servers</label>
+   <input class="shadow appearance-none rounded w-full mb-2" id="numofserv" type="number" id="numofserv">
+
+   <label class="block font-bold mb-2 text-white" for="quality">Quality of service</label>
+   <select class="w-full rounded" id="qualityofserv">
+    <option value="0" >Choose service quality</option>
+    <option value="0.05">Bad</option>
+    <option value="0.1">Okay</option>
+    <option value="0.15">Good</option>
+    <option value="0.2">Superb</option>
+   </select>
+   <input type="submit" value="Calculate tip" class="rounded bg-blue-500 hover:bg-blue-400 p-2 mt-2 font-bold ">
+  </form>
+  <div class="w-32 mx-auto font-bold text-xl mt-9 lonetip display-none flex content-center">
+   <span>Tip:</span>
+   <sup>$</sup><span class="lonetip" id="tipeach"></span>
+   <small class="pl-8" id="each">Each</small>
+  </div>
+  
+ </div>
+ <script src="app.js"></script>
+</body>
+</html>
